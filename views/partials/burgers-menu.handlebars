@@ -1,14 +1,13 @@
+{{#if burgers.length}}
 <h2>Burgers Menu!</h2>
 <br>
 <ul style="list-style: none;">
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
-        {{this.burger_name}}
-        <br>
-        {{> burgers/devourButtons}}
-        <hr>
+        {{this.burger_name}} {{> devourButtons}}
       </li>
     {{/unless}}
   {{/each}}
+  {{/if}}
 </ul>

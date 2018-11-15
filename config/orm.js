@@ -1,8 +1,8 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-// This function will add questions marks to the query
-function createQueriesQuestions(num) {
+// Helper function for SQL syntax.
+function printQuestionMarks(num) {
   var arr = [];
 
   for (var i = 0; i < num; i++) {
@@ -25,7 +25,8 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Object for all our SQL statement functions.}
+
 var orm = {
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
